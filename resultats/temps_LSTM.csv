@@ -1,0 +1,2 @@
+Modèle,Époques,Taille de lot,Durée totale fit (s),Durée première époque (s),Durée médiane époques 2 à 20 (s)
+LSTM,20,32,13.730433702000028,5.649164417000065,0.41568244700010837

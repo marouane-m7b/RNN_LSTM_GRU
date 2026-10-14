@@ -1,0 +1,2 @@
+Modèle,Époques,Taille de lot,Durée totale fit (s),Durée première époque (s),Durée médiane époques 2 à 20 (s)
+SimpleRNN,20,32,12.211374606999925,4.182832499000142,0.4191870149998067

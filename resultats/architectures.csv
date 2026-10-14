@@ -1,0 +1,4 @@
+Modèle,Unités récurrentes,Forme entrée (hors lot),Forme sortie (hors lot),Paramètres entraînables
+SimpleRNN,32,"(40, 1)","(1,)",1121
+LSTM,32,"(40, 1)","(1,)",4385
+GRU,32,"(40, 1)","(1,)",3393

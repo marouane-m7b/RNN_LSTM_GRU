@@ -1,0 +1,39 @@
+{
+  "config": {
+    "fenetre_heures": 72,
+    "horizon_heures": 24,
+    "unites": 32,
+    "lot": 128,
+    "epoques": 20,
+    "taux_apprentissage": 0.001,
+    "graine": 42,
+    "fraction_train": 0.7,
+    "fraction_validation": 0.15,
+    "clipnorm": 1.0,
+    "melange": false,
+    "preparation": "moyenne_horaire_ffill_3h_exclusion_fenetres_v2"
+  },
+  "url": "https://storage.googleapis.com/tensorflow/tf-keras-datasets/jena_climate_2009_2016.csv.zip",
+  "sha256_archive": "63d757501e92284a7de7cdbef0337f03b24e13ead7ac2b5b8c86a18d8e38ba5b",
+  "qualite": {
+    "lignes_brutes": 420551,
+    "dates_dupliquees": 327,
+    "temperatures_hors_limites": 0,
+    "valeurs_brutes_absentes": 0,
+    "heures": 70129,
+    "heures_absentes_avant_remplissage": 88,
+    "heures_absentes_apres_remplissage": 82
+  },
+  "frontiere_train": 49090,
+  "frontiere_validation": 59609,
+  "moyenne_train_C": 9.109564066087557,
+  "ecart_type_train_C": 8.64498630265702,
+  "python": "3.12.3",
+  "tensorflow": "2.21.0",
+  "keras": "3.15.1",
+  "numpy": "2.5.4",
+  "pandas": "3.0.6",
+  "gpu": [
+    "NVIDIA GeForce RTX 5070"
+  ]
+}
