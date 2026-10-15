@@ -61,6 +61,8 @@ Après redémarrage, réexécuter les cellules dans l'ordre avec `REENTRAINER = 
 
 Le Notebook a été contrôlé structurellement et syntaxiquement, avec un contrôle miniature de l'indexation des fenêtres. Après le premier contrôle de qualité de l'étudiant, la préparation a été corrigée pour conserver les longues lacunes sur la grille horaire et exclure les fenêtres incomplètes, plutôt que de les remplir artificiellement. La normalisation ignore les valeurs absentes de la période d'entraînement ; les cibles initialement absentes sont exclues. Les entraînements restent à exécuter dans Jupyter.
 
+**Mise à jour : expérience réelle exécutée par l'étudiant**, identifiant `4614d659431c`. Les scores finaux sont dans `resultats/jena/4614d659431c/comparaison_test.csv`. MAE test : persistance 2,4958 °C ; SimpleRNN 2,5623 °C ; LSTM 2,4666 °C ; GRU 2,4621 °C. Gains modestes pour LSTM/GRU, pas de gain pour SimpleRNN. Les six figures et trois modèles sont sauvegardés. Le test ayant été examiné, ne pas modifier les réglages pour améliorer ce même test. Voir `notes_presentation.md` pour l'interprétation.
+
 ### Expérience synthétique terminée
 Les trois modèles ont été entraînés par l'étudiant pendant 20 époques et évalués sur le test réservé. Les figures comparatives sont produites. Les modèles finaux sont dans `modeles/`, les mesures et prévisions dans `resultats/` et les images dans `figures/`.
 

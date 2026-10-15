@@ -1,0 +1,4 @@
+Modèle,Unités,Paramètres
+SimpleRNN,32,1121
+LSTM,32,4385
+GRU,32,3393

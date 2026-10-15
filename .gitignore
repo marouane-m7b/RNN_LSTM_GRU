@@ -1,0 +1,27 @@
+# Local Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Dependencies and temporary presentation builds
+node_modules/
+.presentation-build*/
+presentation/rendus/
+presentation/.canva-draft-state.json
+presentation/Comparaison_SimpleRNN_LSTM_GRU_Design.pptx
+
+# Jupyter autosaves and local backup copies
+.ipynb_checkpoints/
+*.avant_correction.ipynb
+
+# Local configuration and operating-system files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+*.log

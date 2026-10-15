@@ -1,0 +1,6 @@
+Schémas PNG téléchargés sans modification
+Auteur : fdeloche (Wikimedia Commons)
+Licence : CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
+SimpleRNN : https://commons.wikimedia.org/wiki/File:Recurrent_neural_network_unfold.svg
+LSTM : https://commons.wikimedia.org/wiki/File:Long_Short-Term_Memory.svg
+GRU : https://commons.wikimedia.org/wiki/File:Gated_Recurrent_Unit.svg

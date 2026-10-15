@@ -1,9 +1,24 @@
 # Notes pour la présentation
 
-## Extension réelle en préparation
-Le Notebook `02_comparaison_jena_climate.ipynb` est complet mais non exécuté. Il prévoit une expérience principale sur Jena Climate : 72 températures horaires pour prévoir une cible à +24 h, erreurs en °C, références par persistance et hebdomadaire. Aucun score réel n'est encore disponible.
+## PowerPoint livré
+Version Canva importée (25 pages) : https://www.canva.com/d/Dwj9fqn-6V5plag . Identifiant : `DAHYCMiUKI4`. Texte des pages 1, 8, 17, 18 et 20 contrôlé après conversion, notamment paramètres, scores et durées. Le fichier PowerPoint reste la source locale.
 
-Après exécution, les notes et figures seront sauvegardées sous `resultats/jena/<identifiant>/notes_presentation_jena.md` et `figures/jena/<identifiant>/`. Réorganiser alors le diaporama : courte introduction avec la sinusoïde, puis données réelles, protocole, résultats et limites. Ne pas comparer directement les valeurs d'erreur entre les deux expériences, dont les unités et horizons diffèrent. La structure de 30 minutes ci-dessous concerne l'expérience synthétique et sera adaptée aux résultats réels.
+Version visuelle recommandée : `presentation/Comparaison_SimpleRNN_LSTM_GRU_Design_Final.pptx`. Refonte des 25 diapositives avec fond nuit et pages claires, palette stable par architecture, grands chiffres et graphiques natifs. Les notes françaises et les sources restent dans le PowerPoint. Couverture conceptuelle créée avec ImageGen, sans valeur de mesure météorologique.
+
+`presentation/Comparaison_SimpleRNN_LSTM_GRU.pptx` : 25 diapositives en français, dont 23 pour l'exposé et les questions, puis deux annexes. Durée indicative 29,5 minutes. Les notes du présentateur accompagnent chaque diapositive et citent les sources pertinentes. Les résultats réels, leurs faibles gains face à la persistance et les limites de la comparaison constituent le cœur de l'exposé.
+
+## Expérience réelle terminée — expérience principale du diaporama
+Le Notebook `02_comparaison_jena_climate.ipynb` a été exécuté par l'étudiant jusqu'aux exports. Expérience `4614d659431c` : 72 températures horaires pour prévoir une cible à +24 h, erreurs en °C, références par persistance et hebdomadaire. Fichiers de scores, six figures et trois modèles sauvegardés vérifiés.
+
+Résultats de test (MAE / RMSE, en °C) : persistance 2,4958 / 3,2477 ; référence hebdomadaire 4,6262 / 5,7685 ; SimpleRNN 2,5623 / 3,2510 ; LSTM 2,4666 / 3,1585 ; GRU 2,4621 / 3,1502. Réduction de MAE face à la persistance : SimpleRNN -2,6648 %, LSTM +1,1679 %, GRU +1,3506 %.
+
+Interprétation : la persistance constitue une référence forte. Les améliorations de LSTM et GRU sont modestes (environ 0,03 °C de MAE) ; SimpleRNN ne bat pas la persistance sur ce protocole. GRU et LSTM sont très proches (écart de MAE d'environ 0,0046 °C). Ne pas présenter une supériorité statistiquement établie à partir d'une seule graine. Les courbes de validation de SimpleRNN oscillent davantage ; cela suggère une sensibilité de l'optimisation dans cette configuration, pas une preuve isolée de disparition du gradient ni une incapacité générale des RNN.
+
+Temps de fit : SimpleRNN 100,04 s, LSTM 92,29 s, GRU 82,92 s. Médianes des époques après la première : 4,481 s, 4,359 s, 3,980 s. GRU est la plus rapide dans cette exécution ; le classement dépend du matériel, des implémentations, du démarrage et de l'ordre d'exécution. Ne pas attribuer la vitesse au seul nombre de paramètres.
+
+Le test a été consulté ; ne pas ajuster les modèles pour améliorer ce même test. Les résultats constituent une comparaison expérimentale valable, même si les gains sur la persistance sont petits.
+
+Les notes et figures sont sauvegardées sous `resultats/jena/4614d659431c/notes_presentation_jena.md` et `figures/jena/4614d659431c/`. Réorganiser le diaporama : courte introduction avec la sinusoïde, puis données réelles, protocole, résultats et limites. Ne pas comparer directement les valeurs d'erreur entre les deux expériences, dont les unités et horizons diffèrent. La structure de 30 minutes ci-dessous concerne l'expérience synthétique et sera adaptée aux résultats réels.
 
 ## État actuel
 - Sujet proposé : prévision d'un signal périodique synthétique bruité.
@@ -54,3 +69,6 @@ Conserver les figures 05 à 07 en annexe si nécessaire. Éviter de répéter to
 
 ## Observations à compléter après chaque étape
 Consigner les résultats obtenus, leur interprétation, les difficultés et les limites. Ne pas présumer du modèle gagnant.
+
+## Nouvelle création native Canva
+Design créé depuis zéro : DAHYEdIavgA, 25 pages en français. Lien : https://canva.link/z9b31oqdf46dpul . Cette création ne réutilise pas le PowerPoint importé. Contenu textuel et valeurs du test vérifiés. Les outils connectés ne permettent pas de régler ou de confirmer les transitions et animations.
